@@ -9,7 +9,7 @@ public class Exercise01 {
         CompletableFuture<Void> future = CompletableFuture.runAsync(() ->{
             try {
                 Thread.sleep(2000);
-                System.out.println("Hello World!");
+                System.out.println("Hello...");
             }catch (Exception e){
                 e.printStackTrace();
             }
