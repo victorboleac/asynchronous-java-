@@ -6,7 +6,6 @@ public class Exercise02 {
     public static void main(String[] args) {
         CompletableFuture<Void> future1 = CompletableFuture.runAsync(() ->{
             try {
-                Thread.sleep(3000);
                 System.out.print("Hello...");
             }catch (Exception e){
                 e.printStackTrace();
@@ -14,12 +13,12 @@ public class Exercise02 {
         });
         CompletableFuture<Void> future2 = CompletableFuture.runAsync(() ->{
             try {
-                Thread.sleep(5000);
+                Thread.sleep(2000);
                 System.out.print("...World!");
             }catch (Exception e){
                 e.printStackTrace();
             }
         });
-        CompletableFuture.allOf(future1, future2).join();
+future2.join();
     }
 }
