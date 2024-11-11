@@ -11,7 +11,7 @@ public class Exercise03 {
             }catch (Exception e){
                 e.printStackTrace();
             }
-            return "...World";
+            return "...World!";
         });
         CompletableFuture<String> combined = future1.thenCombine(future2, (s1, s2) -> s1+s2);
         combined.thenAccept(System.out::println);
