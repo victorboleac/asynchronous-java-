@@ -16,6 +16,7 @@ public class Exercise09 {
     }
     public static void main(String[] args) {
         String data = "85671 34262 92143 50984 24515 68356 77247 12348 56789 98760";
+
         List<BigInteger> numbers = Arrays.stream(data.split(" "))
                 .map(BigInteger:: new)
                 .toList();
